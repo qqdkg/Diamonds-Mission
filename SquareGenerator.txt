@@ -1,0 +1,30 @@
+	cout<<"Input number that bigger than 1:";
+	int SideLongth,i,j,k;
+	cin>>SideLongth;
+	while(SideLongth<=1){
+		cout<<"Error unlegal input!Input thenumber again:";
+		cin>> SideLongth;               //边长再输入
+	}
+	if(SideLongth==2)
+	{
+		cout<<"**"<<endl;
+		cout<<"**"<<endl;
+	}
+	else
+	{
+		j=SideLongth-2;
+		for(i=1;i<=SideLongth;i++)cout<<"*";					//正方形第一行
+		cout<<endl;
+		for(i=2;i<=SideLongth-1;i++)							//for语句输出中间几行
+		{
+			cout<<"*";											//输出每行开始的"*"
+			k=1;
+			do{
+				cout<<" ";
+				k++;
+			}while(k<=j);
+			cout<<"*"<<endl;											//输出每行结束的"*"
+		}
+		for(i=1;i<=SideLongth;i++) cout<<"*";					//最后一行的"*"
+		cout<<endl;
+	}
